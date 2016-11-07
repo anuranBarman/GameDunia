@@ -1,0 +1,162 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    tools:context="com.anuranbarman.gamedunia.Profile">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnLogout"
+            android:text="Logout"
+            android:background="@color/colorPrimaryDark"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:layout_margin="10dp"
+            android:layout_alignParentRight="true"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:textStyle="bold"/>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="3dp"
+            android:id="@+id/info_card"
+            android:layout_below="@+id/btnLogout"
+            card_view:cardCornerRadius="1dp"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardElevation="4dp"
+            card_view:contentPadding="15dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:id="@+id/profileIcon"
+                    android:src="@drawable/profile"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/userNameText"
+                    android:text="User Name"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginLeft="10dp"
+                    android:layout_alignTop="@+id/profileIcon"
+                    android:layout_toRightOf="@+id/profileIcon"/>
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:id="@+id/emailIcon"
+                    android:layout_below="@+id/profileIcon"
+                    android:src="@drawable/email"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/userEmailText"
+                    android:text="demoemail@example.com"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginLeft="10dp"
+                    android:layout_alignTop="@+id/emailIcon"
+                    android:layout_below="@+id/userNameText"
+                    android:layout_toRightOf="@+id/emailIcon"/>
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:id="@+id/addressIcon"
+                    android:layout_below="@+id/emailIcon"
+                    android:src="@drawable/address"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/userAddressText"
+                    android:text="Demo Address"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginLeft="10dp"
+                    android:layout_alignTop="@+id/addressIcon"
+                    android:layout_below="@+id/userEmailText"
+                    android:layout_toRightOf="@+id/addressIcon"/>
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="3dp"
+            android:layout_below="@+id/info_card"
+            card_view:cardCornerRadius="1dp"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardElevation="4dp"
+            card_view:contentPadding="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your default delivery address :"
+                    android:textSize="20sp"
+                    android:id="@+id/defaultAddressHeader"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    android:padding="10dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:id="@+id/line"
+                    android:layout_below="@+id/defaultAddressHeader"
+                    android:background="@android:color/darker_gray"/>
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/deliveryIcon"
+                    android:src="@drawable/delivery"
+                    android:layout_below="@+id/line"
+                    android:layout_margin="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Demo Address"
+                    android:textSize="20sp"
+                    android:id="@+id/defaultAddress"
+                    android:layout_toRightOf="@+id/deliveryIcon"
+                    android:layout_below="@+id/defaultAddressHeader"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:padding="10dp"/>
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/editAddressImage"
+                    android:layout_below="@+id/defaultAddress"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/edit"/>
+
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+
+
+
+
+</FrameLayout>

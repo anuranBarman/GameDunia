@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/tools">
+    <include android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/toolbar_layout"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total amount : "
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/totalAmount" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/totalAmount"
+            android:text="@string/Rs"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:id="@+id/RSSymbol"
+            android:textColor="@color/colorPrimary"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="0.00"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/totalAmountText"
+            android:layout_toRightOf="@+id/RSSymbol"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:text="Place Order"
+            android:id="@+id/btnPlaceOrder"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:layout_below="@+id/totalAmount"
+            android:layout_alignParentRight="true"
+            android:textColor="@android:color/white"/>
+
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyler_view_cart"
+        android:scrollbars="vertical"
+        android:layout_marginRight="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="6dp"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardElevation="5dp"
+        card_view:cardCornerRadius="5dp"></android.support.v7.widget.RecyclerView>
+</LinearLayout>

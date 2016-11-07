@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/card_view_order"
+        android:layout_gravity="center"
+        android:elevation="3dp"
+        card_view:cardCornerRadius="1dp"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardElevation="4dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cat_list_bg"
+            android:orientation="vertical"
+            android:layout_margin="5dp">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:shrinkColumns="1"
+                android:padding="5dp">
+                <TableRow>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Product Name"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quantity"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:layout_marginRight="20dp"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="( \u20B9 )"
+                            android:layout_toRightOf="@+id/ordergamePriceText"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:layout_alignTop="@+id/ordergamePriceText"
+                            android:id="@+id/rsSymbol"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Price "
+                            android:textAlignment="center"
+                            android:textSize="16dp"
+                            android:id="@+id/ordergamePriceText"
+                            android:textStyle="bold"/>
+                    </RelativeLayout>
+
+                </TableRow>
+                <TableRow>
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/ordergameImage"
+                        android:src="@mipmap/ic_launcher"
+                        android:layout_marginBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Game Name"
+                        android:ellipsize="end"
+                        android:maxLines="10"
+                        android:id="@+id/orderGameName"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/orderquntityText"
+                            android:text="1"
+                            android:textAlignment="gravity"/>
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Game Price"
+                        android:id="@+id/orderGamePrice"/>
+                </TableRow>
+
+            </TableLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/orderIDText"
+                    android:text="OrderID"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/cat_list_bg"
+                    android:padding="5dp"
+                    android:textStyle="bold"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel \n Order"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:background="@color/colorPrimaryDark"
+                    android:textAllCaps="false"
+                    android:padding="5dp"
+                    android:id="@+id/btnCancelOrder"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignTop="@+id/orderIDText"
+                    android:layout_below="@+id/gamePriceText"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/statusText"
+                    android:text="Status : Processing"
+                    android:textSize="18sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/cat_list_bg"
+                    android:padding="5dp"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/orderIDText"/>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

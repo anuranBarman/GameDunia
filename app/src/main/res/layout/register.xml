@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/toolbar_layout"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/gamepad"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="35dp"
+            android:textColor="#1bb3b6"
+            android:text="Game Dunia"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="35dp"
+        android:textColor="#1bb3b6"
+        android:text="Register"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="your email"
+        android:background="@drawable/cat_list_bg"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:id="@+id/registerEmail"
+        android:textColor="@android:color/black"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="your password"
+        android:background="@drawable/cat_list_bg"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:id="@+id/registerPassword"
+        android:inputType="textPassword"
+        android:textColor="@android:color/black"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="your full name"
+        android:background="@drawable/cat_list_bg"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:id="@+id/registerName"
+        android:textColor="@android:color/black"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="your address"
+        android:background="@drawable/cat_list_bg"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:id="@+id/registerAddress"
+        android:textColor="@android:color/black"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:text="Register"
+        android:textAllCaps="false"
+        android:background="#9c1bb6"
+        android:id="@+id/btnRegister"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center_horizontal"/>
+</LinearLayout>

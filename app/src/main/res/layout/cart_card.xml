@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/card_view_cart"
+        android:layout_gravity="center"
+        android:elevation="3dp"
+        card_view:cardCornerRadius="1dp"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardElevation="4dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cat_list_bg"
+            android:layout_margin="5dp">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:shrinkColumns="1"
+                android:padding="5dp">
+                <TableRow>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Product Name"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quantity"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:layout_marginRight="20dp"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="( \u20B9 )"
+                            android:layout_toRightOf="@+id/gamePriceText"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:layout_alignTop="@+id/gamePriceText"
+                            android:id="@+id/rsSymbol"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Price "
+                            android:textAlignment="center"
+                            android:textSize="16dp"
+                            android:id="@+id/gamePriceText"
+                            android:textStyle="bold"/>
+                    </RelativeLayout>
+
+                </TableRow>
+                <TableRow>
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/gameImage"
+                        android:src="@mipmap/ic_launcher"
+                        android:layout_marginBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Game Name"
+                        android:ellipsize="end"
+                        android:maxLines="10"
+                        android:id="@+id/cartGameName"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/quntityText"
+                            android:text="1"
+                            android:textAlignment="gravity"/>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:layout_below="@+id/quntityText"
+                            android:background="@drawable/cat_list_bg">
+                            <Spinner
+                                android:layout_width="wrap_content"
+                                android:textAlignment="gravity"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/cartQuantitySpinner"></Spinner>
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Game Price"
+                        android:id="@+id/cartGamePrice"/>
+                </TableRow>
+                <TableRow android:padding="10dp">
+                    <Button android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:id="@+id/deleteItem"
+                        android:background="@drawable/delete"/>
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

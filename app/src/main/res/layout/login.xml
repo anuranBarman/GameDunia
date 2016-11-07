@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/toolbar_layout"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/gamepad"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="35dp"
+            android:textColor="#1bb3b6"
+            android:text="Game Dunia"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="35dp"
+        android:textColor="#1bb3b6"
+        android:text="Login"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="your email"
+        android:background="@drawable/cat_list_bg"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:id="@+id/loginEmail"
+        android:textColor="@android:color/black"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="your password"
+        android:background="@drawable/cat_list_bg"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:id="@+id/loginPassword"
+        android:inputType="textPassword"
+        android:textColor="@android:color/black"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:background="#9c1bb6"
+        android:id="@+id/btnLogin"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center_horizontal"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Don't have an account? Click here to create"
+        android:textColor="#1bb3b6"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textSize="18dp"
+        android:id="@+id/goToRegister"
+        android:background="@drawable/register_button_link"/>
+</LinearLayout>
